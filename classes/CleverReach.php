@@ -78,32 +78,14 @@ class CleverReach
      *
      * @param string $formId the form id to connect to
      * @param string $email the email address to subscribe
-     * @param boolean $double_optin optional flag to control whether a double opt-in confirmation message is sent, defaults to true.
      * @return boolean
      */
-    public function listSubscribe($formId, $email, $double_optin=true)
+    public function listSubscribe($formId, $email)
     {
         $user = array();
         $user["email"] = $email;
         $user["registered"] = time();
-
-        if ($double_optin)
-        {
-            $user["activated"] = "";
-
-            $doidata = array(
-                "user_ip" => "127.0.0.1", //the IP of the user who registered. not yours! $_SERVER['REMOTE_ADDR'],
-                "user_agent" => "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:14.0) Gecko/20100101 Firefox/14.0.1", // $_SERVER['HTTP_USER_AGENT']
-                "referer" => "http://www.gotham.com/newsletter_subscribe/",
-                "postdata" => "firtsname:bruce,lastname:whayne,nickname:Batman", //just an example. any txt format will do.
-                "info" => "Extra info. the more you provide, the better."
-            );
-
-            $this->sendActivationMail($formId, $email, $doidata);
-
-        } else {
-            $user["activated"] = time();
-        }
+        $user["activated"] = time();
 
         $result = $this->getApi()->receiverAdd($this->apiKey, $formId, $user);
 
