@@ -1,4 +1,4 @@
-<?php namespace Digitalronin\Cleverreach;
+<?php namespace DigitalRonin\CleverReach;
 
 use System\Classes\PluginBase;
 
@@ -6,32 +6,32 @@ class Plugin extends PluginBase
 {
     public function pluginDetails()
     {
-      return [
-          'name'        => 'CleverReach',
-          'description' => 'Provides CleverReach integration services.',
-          'author'      => 'Daniel-Bruni Ziermann',
-          'icon'        => 'icon-envelope',
-          'homepage'    => ''
-      ];
+        return [
+            'name'        => 'CleverReach',
+            'description' => 'Provides CleverReach integration services.',
+            'author'      => 'Daniel-Bruni Ziermann',
+            'icon'        => 'icon-envelope',
+            'homepage'    => ''
+        ];
     }
 
     public function registerComponents()
     {
-      return [
-          'Digitalronin\Cleverreach\Components\Signup' => 'mailSignup'
-      ];
+        return [
+            'DigitalRonin\CleverReach\Components\Signup' => 'mailSignup'
+        ];
     }
 
     public function registerSettings()
     {
-      return [
-          'settings' => [
-              'label'       => 'CleverReach',
-              'icon'        => 'icon-envelope',
-              'description' => 'Configure CleverReach API access.',
-              'class'       => 'Digitalronin\Cleverreach\Models\Settings',
-              'order'       => 600
-          ]
-      ];
+        return [
+            'settings' => [
+                'label'       => 'CleverReach',
+                'icon'        => 'icon-envelope',
+                'description' => 'Configure CleverReach API access.',
+                'class'       => 'DigitalRonin\CleverReach\Models\Settings',
+                'order'       => 600
+            ]
+        ];
     }
 }

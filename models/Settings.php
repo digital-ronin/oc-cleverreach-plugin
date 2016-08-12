@@ -1,4 +1,4 @@
-<?php namespace Digitalronin\Cleverreach\Models;
+<?php namespace DigitalRonin\CleverReach\Models;
 
 use October\Rain\Database\Model;
 
