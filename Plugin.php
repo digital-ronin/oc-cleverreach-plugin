@@ -11,7 +11,7 @@ class Plugin extends PluginBase
             'description' => 'Provides CleverReach integration services.',
             'author'      => 'Daniel-Bruni Ziermann',
             'icon'        => 'icon-envelope',
-            'homepage'    => ''
+            'homepage'    => 'https://github.com/digital-ronin/cleverreach/'
         ];
     }
 

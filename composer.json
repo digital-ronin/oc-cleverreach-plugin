@@ -2,6 +2,7 @@
     "name": "digitalronin/cleverreach-plugin",
     "type": "october-plugin",
     "description": "CleverReach plugin for October CMS",
+    "homepage": "https://github.com/digital-ronin/cleverreach/",
     "keywords": ["october", "octobercms", "cleverreach"],
     "license": "MIT",
     "authors": [
@@ -11,7 +12,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
+        "php": ">=5.5.9",
         "composer/installers": "~1.0"
     },
     "minimum-stability": "dev"
