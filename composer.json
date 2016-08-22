@@ -2,18 +2,18 @@
     "name": "digitalronin/cleverreach-plugin",
     "type": "october-plugin",
     "description": "CleverReach plugin for October CMS",
-    "homepage": "https://github.com/digital-ronin/cleverreach/",
+    "homepage": "https://github.com/digital-ronin/oc-cleverreach-plugin/",
     "keywords": ["october", "octobercms", "cleverreach"],
     "license": "MIT",
     "authors": [
         {
             "name": "Daniel-Bruni Ziermann",
-            "email": "info@digitalronin.de",
+            "email": "info@digitalronin.de"
         }
     ],
     "require": {
         "php": ">=5.5.9",
-        "composer/installers": "~1.0"
-    },
-    "minimum-stability": "dev"
+        "composer/installers": "~1.0",
+        "guzzlehttp/guzzle": "6.2.1"
+    }
 }
